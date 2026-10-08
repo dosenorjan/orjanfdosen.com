@@ -45,13 +45,47 @@ body {
     max-width: 100%;
 }
 
-.self-portrait-image {
-    display: block;
-
+.entrance-work {
     width: min(32vw, 520px);
-    height: auto;
+}
 
+
+/* VERK */
+
+.artwork-card {
     margin: 0;
+}
+
+.artwork-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.artwork-card figcaption {
+    margin-top: 1.4rem;
+    max-width: 34rem;
+}
+
+.artwork-card h2 {
+    margin: 0 0 0.55rem;
+    font-size: clamp(0.95rem, 1.15vw, 1.2rem);
+    line-height: 1.2;
+    font-weight: normal;
+}
+
+.artwork-card p {
+    margin: 0 0 0.35rem;
+    font-size: clamp(0.9rem, 1vw, 1.05rem);
+    line-height: 1.45;
+    font-weight: normal;
+}
+
+.artwork-card small {
+    display: block;
+    margin-top: 0.8rem;
+    font-size: 0.75rem;
+    line-height: 1.4;
 }
 
 
@@ -65,28 +99,15 @@ body {
 
 .x-row {
     width: 100%;
-
     display: grid;
     grid-template-columns: 1fr 1.618fr 1fr;
-
-    align-items: center;
+    align-items: start;
     gap: 7vw;
 }
 
-.x-row img {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.x-side {
-    display: flex;
-    justify-content: center;
-}
-
+.x-side,
 .x-center {
-    display: flex;
-    justify-content: center;
+    display: block;
 }
 
 .x-row-lower {
@@ -96,6 +117,18 @@ body {
     margin: 12vh auto 0;
 
     gap: 9vw;
+}
+
+
+/* MELLOMROM */
+
+.interlude {
+    width: min(68vw, 980px);
+    margin: 22vh auto 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 10vw;
 }
 
 
@@ -196,8 +229,17 @@ body.lightbox-open {
         width: min(72vw, 620px);
     }
 
-    .self-portrait-image {
+    .entrance-work {
         width: min(58vw, 520px);
+    }
+
+    .artwork-card figcaption {
+        margin-top: 1rem;
+    }
+
+    .artwork-card p {
+        font-size: 0.9rem;
+        line-height: 1.4;
     }
 
     .x-section {
@@ -215,6 +257,13 @@ body.lightbox-open {
         margin-top: 8vh;
 
         gap: 5vw;
+    }
+
+    .interlude {
+        width: 82%;
+        margin-top: 16vh;
+        grid-template-columns: 1fr;
+        gap: 14vh;
     }
 
     .major-air {
