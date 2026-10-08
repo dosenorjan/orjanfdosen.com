@@ -347,6 +347,7 @@
                 const open = button.getAttribute("aria-expanded") === "true";
                 button.setAttribute("aria-expanded", String(!open));
                 info.setAttribute("aria-hidden", String(open));
+                info.classList.toggle("is-open", !open);
                 button.textContent = open ? "info" : "info −";
             });
         });
