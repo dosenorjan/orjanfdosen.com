@@ -106,7 +106,8 @@ body {
         transform 0.45s ease;
 }
 
-.info-toggle[aria-expanded="true"] + .artwork-info {
+.info-toggle[aria-expanded="true"] + .artwork-info,
+.artwork-info.is-open {
     max-height: 20rem;
     opacity: 1;
     transform: translateY(0);
