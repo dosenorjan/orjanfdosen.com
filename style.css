@@ -16,15 +16,25 @@ body {
     font-family: Georgia, "Times New Roman", serif;
 }
 
+.artist-page {
+    width: 100%;
+}
+
+
+/* INNGANG */
+
 .entrance {
-    min-height: 100vh;
+    min-height: 150vh;
     width: 100%;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    padding: 10vh 10vw;
+    gap: 28vh;
+
+    padding: 12vh 10vw;
 }
 
 .dosen-signature {
@@ -33,4 +43,57 @@ body {
     width: min(42vw, 620px);
     height: auto;
     max-width: 100%;
+}
+
+.self-portrait-image {
+    display: block;
+
+    width: min(32vw, 520px);
+    height: auto;
+
+    margin: 0;
+}
+
+
+/* X 1 */
+
+.x-section {
+    width: 100%;
+
+    padding: 8vh 8vw 30vh;
+}
+
+.x-row {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1.618fr 1fr;
+
+    align-items: center;
+    gap: 7vw;
+}
+
+.x-row img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.x-side {
+    display: flex;
+    justify-content: center;
+}
+
+.x-center {
+    display: flex;
+    justify-content: center;
+}
+
+.x-row-lower {
+    grid-template-columns: 1fr 1fr;
+
+    width: 68%;
+    margin: 12vh auto 0;
+
+    gap: 9vw;
 }
