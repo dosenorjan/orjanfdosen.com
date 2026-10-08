@@ -22,7 +22,7 @@
             >
 
             <img
-                class="self-portrait-image"
+                class="self-portrait-image artwork"
                 src="images/selvportrett_23_clean_red.png"
                 alt="Selvportrett 23"
             >
@@ -38,6 +38,7 @@
 
                 <div class="x-side">
                     <img
+                        class="artwork"
                         src="images/ridder_clean_red.png"
                         alt="Ridder"
                     >
@@ -45,6 +46,7 @@
 
                 <div class="x-center">
                     <img
+                        class="artwork"
                         src="images/king_of_the_jews_clean_red.png"
                         alt="King of the Jews"
                     >
@@ -52,6 +54,7 @@
 
                 <div class="x-side">
                     <img
+                        class="artwork"
                         src="images/kristus_rex_clean_red.png"
                         alt="Kristus Rex"
                     >
@@ -63,6 +66,7 @@
 
                 <div class="x-side">
                     <img
+                        class="artwork"
                         src="images/dapen_clean_red.png"
                         alt="Dåpen"
                     >
@@ -70,6 +74,7 @@
 
                 <div class="x-side">
                     <img
+                        class="artwork"
                         src="images/livets_sirkel_clean_red.png"
                         alt="Livets sirkel"
                     >
@@ -93,6 +98,7 @@
 
                 <div class="x-side">
                     <img
+                        class="artwork"
                         src="images/jesus_pa_vann_clean_red.png"
                         alt="Jesus på Vann"
                     >
@@ -100,6 +106,7 @@
 
                 <div class="x-center">
                     <img
+                        class="artwork"
                         src="images/revelation_clean_red.png"
                         alt="Revelation"
                     >
@@ -107,6 +114,7 @@
 
                 <div class="x-side">
                     <img
+                        class="artwork"
                         src="images/jomfru_maria_clean_red.png"
                         alt="Jomfru Maria"
                     >
@@ -118,6 +126,7 @@
 
                 <div class="x-side">
                     <img
+                        class="artwork"
                         src="images/dd_jesus_clean_red.png"
                         alt="Død Jesus"
                     >
@@ -125,6 +134,7 @@
 
                 <div class="x-side">
                     <img
+                        class="artwork"
                         src="images/charlie_kirk_clean_red.png"
                         alt="Charlie Kirk"
                     >
@@ -135,6 +145,67 @@
         </section>
 
     </main>
+
+
+    <!-- STORT BILDE -->
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+
+        <img
+            class="lightbox-image"
+            id="lightbox-image"
+            src=""
+            alt=""
+        >
+
+    </div>
+
+
+    <script>
+
+        const artworks = document.querySelectorAll(".artwork");
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImage = document.getElementById("lightbox-image");
+
+        function openLightbox(artwork) {
+            lightboxImage.src = artwork.src;
+            lightboxImage.alt = artwork.alt;
+
+            lightbox.classList.add("open");
+            lightbox.setAttribute("aria-hidden", "false");
+
+            document.body.classList.add("lightbox-open");
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove("open");
+            lightbox.setAttribute("aria-hidden", "true");
+
+            lightboxImage.src = "";
+            lightboxImage.alt = "";
+
+            document.body.classList.remove("lightbox-open");
+        }
+
+        artworks.forEach((artwork) => {
+            artwork.addEventListener("click", () => {
+                openLightbox(artwork);
+            });
+        });
+
+        lightbox.addEventListener("click", (event) => {
+            if (event.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+        });
+
+    </script>
 
 </body>
 </html>
