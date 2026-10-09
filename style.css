@@ -190,7 +190,7 @@ body {
 
 .major-air {
     width: 100%;
-    height: 70vh;
+    height: 32vh;
 }
 
 
@@ -321,7 +321,7 @@ body.lightbox-open {
     }
 
     .major-air {
-        height: 45vh;
+        height: 24vh;
     }
 
     .x-section-two {
@@ -344,8 +344,8 @@ body.lightbox-open {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 10vh;
-    padding: 0 7vw 8vh;
+    margin-top: 28vh;
+    padding: 0 7vw 4vh;
 }
 
 .statement-frame {
@@ -414,7 +414,7 @@ body.lightbox-open {
 .statement-link:focus-visible { opacity: 1; }
 
 @media (max-width: 700px) {
-    .artist-statement { padding: 0 6vw 6vh; }
+    .artist-statement { margin-top: 18vh; padding: 0 6vw 3vh; }
     .statement-frame {
         width: min(100%, 380px);
         padding: 2.4rem 1.1rem 2.3rem;
