@@ -338,41 +338,88 @@ body.lightbox-open {
     }
 }
 
-/* KUNSTNER / FORLAG */
+/* KUNSTNERTEKST I MELLOMROMMET */
 
-.artist-footer {
-    width: min(560px, 78vw);
-    margin: 0 auto;
-    padding: 0 0 10vh;
-    color: #111111;
+.artist-statement {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 7vw 8vh;
 }
 
-.artist-footer h1 {
-    margin: 0 0 0.8rem;
-    font-size: 0.78rem;
-    line-height: 1.3;
-    font-weight: 400;
+.statement-frame {
+    position: relative;
+    width: min(560px, 82vw);
+    padding: 3.2rem 2.6rem 3rem;
+    border: 1px solid rgba(17, 17, 17, 0.38);
+    text-align: center;
 }
 
-.artist-footer p {
+.statement-frame::before,
+.statement-frame::after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    right: 9px;
+    height: 5px;
+    border-top: 1px solid rgba(17, 17, 17, 0.18);
+    border-bottom: 1px solid rgba(17, 17, 17, 0.18);
+}
+
+.statement-frame::before { top: 8px; }
+.statement-frame::after { bottom: 8px; }
+
+.frame-ornament {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 0.65rem;
+    background: #ffffff;
+    color: rgba(17, 17, 17, 0.68);
+    font-size: 0.8rem;
+    line-height: 1;
+}
+
+.frame-ornament-top { top: -0.4rem; }
+.frame-ornament-bottom { bottom: -0.4rem; }
+
+.statement-name {
+    margin: 0 0 1.2rem;
+    font-size: 0.72rem;
+    line-height: 1.4;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.statement-copy {
     margin: 0;
-    font-size: 0.78rem;
-    line-height: 1.55;
+    font-size: clamp(0.82rem, 1vw, 0.92rem);
+    line-height: 1.7;
     font-weight: 400;
 }
 
-.artist-footer a {
+.statement-link {
     display: inline-block;
-    margin-top: 1.1rem;
+    margin-top: 1.4rem;
     color: inherit;
     font-size: 0.72rem;
     line-height: 1.4;
     text-decoration: none;
-    opacity: 0.65;
+    opacity: 0.62;
     transition: opacity 0.2s ease;
 }
 
-.artist-footer a:hover,
-.artist-footer a:focus-visible {
-    opacity: 1;
+.statement-link:hover,
+.statement-link:focus-visible { opacity: 1; }
+
+@media (max-width: 700px) {
+    .artist-statement { padding: 0 6vw 6vh; }
+    .statement-frame {
+        width: 100%;
+        padding: 2.6rem 1.3rem 2.5rem;
+    }
+    .statement-copy {
+        font-size: 0.82rem;
+        line-height: 1.6;
+    }
 }
