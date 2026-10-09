@@ -344,6 +344,7 @@ body.lightbox-open {
     width: 100%;
     display: flex;
     justify-content: center;
+    margin-top: 10vh;
     padding: 0 7vw 8vh;
 }
 
