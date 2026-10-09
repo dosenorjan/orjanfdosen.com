@@ -349,8 +349,8 @@ body.lightbox-open {
 
 .statement-frame {
     position: relative;
-    width: min(560px, 82vw);
-    padding: 3.2rem 2.6rem 3rem;
+    width: min(440px, 76vw);
+    padding: 2.8rem 2rem 2.6rem;
     border: 1px solid rgba(17, 17, 17, 0.38);
     text-align: center;
 }
@@ -393,8 +393,8 @@ body.lightbox-open {
 
 .statement-copy {
     margin: 0;
-    font-size: clamp(0.82rem, 1vw, 0.92rem);
-    line-height: 1.7;
+    font-size: clamp(0.95rem, 1.15vw, 1.05rem);
+    line-height: 1.65;
     font-weight: 400;
 }
 
@@ -415,8 +415,8 @@ body.lightbox-open {
 @media (max-width: 700px) {
     .artist-statement { padding: 0 6vw 6vh; }
     .statement-frame {
-        width: 100%;
-        padding: 2.6rem 1.3rem 2.5rem;
+        width: min(100%, 380px);
+        padding: 2.4rem 1.1rem 2.3rem;
     }
     .statement-copy {
         font-size: 0.82rem;
