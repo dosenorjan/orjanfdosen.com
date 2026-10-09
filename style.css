@@ -33,7 +33,7 @@ body {
 .dosen-signature {
     display: block;
 
-    width: min(42vw, 620px);
+    width: min(46vw, 680px);
     height: auto;
     max-width: 100%;
 }
@@ -280,7 +280,7 @@ body.lightbox-open {
     }
 
     .dosen-signature {
-        width: min(72vw, 620px);
+        width: min(78vw, 680px);
     }
 
     .entrance-work {
