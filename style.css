@@ -423,3 +423,91 @@ body.lightbox-open {
         line-height: 1.6;
     }
 }
+
+
+/* AVSLUTNING: OM, FORLAG OG OFFENTLIGGJØRINGER */
+
+.page-notes {
+    width: min(1080px, 84vw);
+    margin: 0 auto;
+    padding: 0 0 12vh;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr 1fr;
+    gap: clamp(2rem, 5vw, 5rem);
+    border-top: 1px solid rgba(17, 17, 17, 0.16);
+}
+
+.page-note {
+    padding-top: 1.8rem;
+    min-width: 0;
+}
+
+.page-note h2 {
+    margin: 0 0 1rem;
+    font-size: 0.72rem;
+    line-height: 1.4;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.page-note p {
+    margin: 0;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    font-weight: 400;
+}
+
+.page-note-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: inherit;
+    font-size: 0.76rem;
+    line-height: 1.5;
+    text-decoration: none;
+    opacity: 0.62;
+    transition: opacity 0.2s ease;
+}
+
+.page-note-link:hover,
+.page-note-link:focus-visible {
+    opacity: 1;
+}
+
+.page-note .announcement-empty {
+    opacity: 0.52;
+}
+
+.page-note .announcement {
+    margin-top: 0.85rem;
+}
+
+.page-note time {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.68rem;
+    opacity: 0.58;
+}
+
+.page-note .announcement a {
+    color: inherit;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+}
+
+@media (max-width: 700px) {
+    .page-notes {
+        width: 84vw;
+        grid-template-columns: 1fr;
+        gap: 1.7rem;
+        padding-bottom: 9vh;
+    }
+
+    .page-note {
+        padding-top: 1.4rem;
+    }
+
+    .page-note h2 {
+        margin-bottom: 0.7rem;
+    }
+}
