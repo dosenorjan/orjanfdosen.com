@@ -337,3 +337,42 @@ body.lightbox-open {
         max-height: 90vh;
     }
 }
+
+/* KUNSTNER / FORLAG */
+
+.artist-footer {
+    width: min(560px, 78vw);
+    margin: 0 auto;
+    padding: 0 0 10vh;
+    color: #111111;
+}
+
+.artist-footer h1 {
+    margin: 0 0 0.8rem;
+    font-size: 0.78rem;
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+.artist-footer p {
+    margin: 0;
+    font-size: 0.78rem;
+    line-height: 1.55;
+    font-weight: 400;
+}
+
+.artist-footer a {
+    display: inline-block;
+    margin-top: 1.1rem;
+    color: inherit;
+    font-size: 0.72rem;
+    line-height: 1.4;
+    text-decoration: none;
+    opacity: 0.65;
+    transition: opacity 0.2s ease;
+}
+
+.artist-footer a:hover,
+.artist-footer a:focus-visible {
+    opacity: 1;
+}
